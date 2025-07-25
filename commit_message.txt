@@ -1,1 +1,1 @@
-Added framer-motion animations to Hero section.
+Integrated react-icons and framer-motion animations into AboutMe, Services, Contact, Skills, Projects, and Footer sections.
