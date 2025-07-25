@@ -1,1 +1,1 @@
-Fixed Navbar styling and added mobile menu functionality.
+Added framer-motion animations to Hero section.

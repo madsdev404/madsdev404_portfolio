@@ -1,9 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { FaMusic, FaSuitcaseRolling, FaFilm, FaFootballBall } from 'react-icons/fa';
 
 const AboutMe = () => {
   return (
-    <section className="ftco-about ftco-section ftco-no-pt ftco-no-pb py-16" id="about-section">
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="ftco-about ftco-section ftco-no-pt ftco-no-pb py-16"
+      id="about-section"
+    >
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap no-gutters">
           <div className="w-full md:w-1/2 lg:w-5/12 flex">
@@ -32,19 +40,19 @@ const AboutMe = () => {
                 <div className="w-full mt-4">
                   <div className="my-interest flex flex-wrap w-full">
                     <div className="interest-wrap flex items-center mr-4 mb-2">
-                      <div className="icon flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 text-white mr-2"><span className="flaticon-listening"></span></div>
+                      <div className="icon flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 text-white mr-2"><FaMusic className="text-xl" /></div>
                       <div className="text">Music</div>
                     </div>
                     <div className="interest-wrap flex items-center mr-4 mb-2">
-                      <div className="icon flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 text-white mr-2"><span className="flaticon-suitcases"></span></div>
+                      <div className="icon flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 text-white mr-2"><FaSuitcaseRolling className="text-xl" /></div>
                       <div className="text">Travel</div>
                     </div>
                     <div className="interest-wrap flex items-center mr-4 mb-2">
-                      <div className="icon flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 text-white mr-2"><span className="flaticon-video-player"></span></div>
+                      <div className="icon flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 text-white mr-2"><FaFilm className="text-xl" /></div>
                       <div className="text">Movie</div>
                     </div>
                     <div className="interest-wrap flex items-center mr-4 mb-2">
-                      <div className="icon flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 text-white mr-2"><span className="flaticon-football"></span></div>
+                      <div className="icon flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 text-white mr-2"><FaFootballBall className="text-xl" /></div>
                       <div className="text">Sports</div>
                     </div>
                   </div>
@@ -54,7 +62,7 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

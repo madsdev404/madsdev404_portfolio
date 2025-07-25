@@ -1,19 +1,37 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { FaMapMarkerAlt, FaPhone, FaPaperPlane, FaGlobe } from 'react-icons/fa';
 
 const Contact = () => {
   return (
-    <section className="ftco-section contact-section ftco-no-pb py-16" id="contact-section">
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="ftco-section contact-section ftco-no-pb py-16"
+      id="contact-section"
+    >
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-center mb-5 pb-3">
-          <div className="w-full md:w-7/12 heading-section text-center animate-fade-in">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="w-full md:w-7/12 heading-section text-center animate-fade-in"
+          >
             <span className="subheading text-lg font-semibold text-gray-600">Contact us</span>
             <h2 className="mb-4 text-4xl font-bold">Have a Project?</h2>
             <p className="text-gray-700">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="flex flex-wrap -mx-4">
-          <div className="w-full md:w-8/12 px-4 mb-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="w-full md:w-8/12 px-4 mb-8"
+          >
             <form action="#" className="bg-white p-8 md:p-10 rounded-lg shadow contact-form">
               <div className="flex flex-wrap -mx-2">
                 <div className="w-full md:w-1/2 px-2 mb-4">
@@ -43,13 +61,18 @@ const Contact = () => {
                 </div>
               </div>
             </form>
-          </div>
+          </motion.div>
 
-          <div className="w-full md:w-4/12 flex pl-0 md:pl-5">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="w-full md:w-4/12 flex pl-0 md:pl-5"
+          >
             <div className="w-full">
               <div className="dbox w-full flex mb-4">
                 <div className="icon flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white mr-4">
-                  <span className="fa fa-map-marker"></span>
+                  <FaMapMarkerAlt className="text-xl" />
                 </div>
                 <div className="text">
                   <p><span className="font-semibold">Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
@@ -57,7 +80,7 @@ const Contact = () => {
               </div>
               <div className="dbox w-full flex mb-4">
                 <div className="icon flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white mr-4">
-                  <span className="fa fa-phone"></span>
+                  <FaPhone className="text-xl" />
                 </div>
                 <div className="text">
                   <p><span className="font-semibold">Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
@@ -65,7 +88,7 @@ const Contact = () => {
               </div>
               <div className="dbox w-full flex mb-4">
                 <div className="icon flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white mr-4">
-                  <span className="fa fa-paper-plane"></span>
+                  <FaPaperPlane className="text-xl" />
                 </div>
                 <div className="text">
                   <p><span className="font-semibold">Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
@@ -73,17 +96,17 @@ const Contact = () => {
               </div>
               <div className="dbox w-full flex">
                 <div className="icon flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white mr-4">
-                  <span className="fa fa-globe"></span>
+                  <FaGlobe className="text-xl" />
                 </div>
                 <div className="text">
                   <p><span className="font-semibold">Website</span> <a href="#">yoursite.com</a></p>
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
