@@ -15,7 +15,7 @@ const AboutMe = () => {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="ftco-about ftco-section ftco-no-pt ftco-no-pb py-16"
+      className="ftco-about ftco-section ftco-no-pt ftco-no-pb py-16 dark:bg-gray-800"
       id="about-section"
     >
       <div className="container mx-auto px-4">
@@ -99,7 +99,7 @@ const AboutMe = () => {
                       <div className="icon flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 text-white mr-2">
                         <FaFootballBall className="text-xl" />
                       </div>
-                      <div className="text">Sports</div>
+                      <div className="text dark:text-gray-200">Sports</div>
                     </div>
                   </div>
                 </div>

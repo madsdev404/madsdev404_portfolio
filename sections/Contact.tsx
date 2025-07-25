@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FaMapMarkerAlt, FaPhone, FaPaperPlane, FaGlobe } from 'react-icons/fa';
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { FaMapMarkerAlt, FaPhone, FaPaperPlane, FaGlobe } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -9,7 +9,7 @@ const Contact = () => {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="ftco-section contact-section ftco-no-pb py-16"
+      className="ftco-section contact-section bg-white dark:bg-gray-800 ftco-no-pb py-16"
       id="contact-section"
     >
       <div className="container mx-auto px-4">
@@ -20,9 +20,14 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="w-full md:w-7/12 heading-section text-center animate-fade-in"
           >
-            <span className="subheading text-lg font-semibold text-gray-600">Contact us</span>
+            <span className="subheading text-lg font-semibold text-gray-600">
+              Contact us
+            </span>
             <h2 className="mb-4 text-4xl font-bold">Have a Project?</h2>
-            <p className="text-gray-700">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+            <p className="text-gray-700 dark:text-gray-500">
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia
+            </p>
           </motion.div>
         </div>
 
@@ -33,31 +38,57 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="w-full md:w-8/12 px-4 mb-8"
           >
-            <form action="#" className="bg-white p-8 md:p-10 rounded-lg shadow contact-form">
+            <form
+              action="#"
+              className="bg-white dark:bg-gray-700 p-8 md:p-10 rounded-lg shadow contact-form"
+            >
               <div className="flex flex-wrap -mx-2">
                 <div className="w-full md:w-1/2 px-2 mb-4">
                   <div className="form-group">
-                    <input type="text" className="form-control w-full p-3 border border-gray-300 rounded-md" placeholder="Your Name" />
+                    <input
+                      type="text"
+                      className="form-control w-full bg-white dark:bg-gray-600 p-3 border border-gray-300 rounded-md"
+                      placeholder="Your Name"
+                    />
                   </div>
                 </div>
                 <div className="w-full md:w-1/2 px-2 mb-4">
                   <div className="form-group">
-                    <input type="text" className="form-control w-full p-3 border border-gray-300 rounded-md" placeholder="Your Email" />
+                    <input
+                      type="text"
+                      className="form-control w-full bg-white dark:bg-gray-600 p-3 border border-gray-300 rounded-md"
+                      placeholder="Your Email"
+                    />
                   </div>
                 </div>
                 <div className="w-full px-2 mb-4">
                   <div className="form-group">
-                    <input type="text" className="form-control w-full p-3 border border-gray-300 rounded-md" placeholder="Subject" />
+                    <input
+                      type="text"
+                      className="form-control w-full bg-white dark:bg-gray-600 p-3 border border-gray-300 rounded-md"
+                      placeholder="Subject"
+                    />
                   </div>
                 </div>
                 <div className="w-full px-2 mb-4">
                   <div className="form-group">
-                    <textarea name="" id="" cols={30} rows={7} className="form-control w-full p-3 border border-gray-300 rounded-md" placeholder="Message"></textarea>
+                    <textarea
+                      name=""
+                      id=""
+                      cols={30}
+                      rows={7}
+                      className="form-control w-full bg-white dark:bg-gray-600 p-3 border border-gray-300 rounded-md"
+                      placeholder="Message"
+                    ></textarea>
                   </div>
                 </div>
                 <div className="w-full px-2 mb-4">
                   <div className="form-group">
-                    <input type="submit" value="Send Message" className="btn btn-primary bg-blue-500 hover:bg-blue-600 text-white py-3 px-5 rounded-full cursor-pointer" />
+                    <input
+                      type="submit"
+                      value="Send Message"
+                      className="btn btn-primary bg-blue-500 hover:bg-blue-600 text-white py-3 px-5 rounded-full cursor-pointer"
+                    />
                   </div>
                 </div>
               </div>
@@ -76,7 +107,10 @@ const Contact = () => {
                   <FaMapMarkerAlt className="text-xl" />
                 </div>
                 <div className="text">
-                  <p><span className="font-semibold">Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                  <p>
+                    <span className="font-semibold">Address:</span> 198 West
+                    21th Street, Suite 721 New York NY 10016
+                  </p>
                 </div>
               </div>
               <div className="dbox w-full flex mb-4">
@@ -84,7 +118,10 @@ const Contact = () => {
                   <FaPhone className="text-xl" />
                 </div>
                 <div className="text">
-                  <p><span className="font-semibold">Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                  <p>
+                    <span className="font-semibold">Phone:</span>{" "}
+                    <a href="tel://1234567920">+ 1235 2355 98</a>
+                  </p>
                 </div>
               </div>
               <div className="dbox w-full flex mb-4">
@@ -92,7 +129,10 @@ const Contact = () => {
                   <FaPaperPlane className="text-xl" />
                 </div>
                 <div className="text">
-                  <p><span className="font-semibold">Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                  <p>
+                    <span className="font-semibold">Email:</span>{" "}
+                    <a href="mailto:info@yoursite.com">info@yoursite.com</a>
+                  </p>
                 </div>
               </div>
               <div className="dbox w-full flex">
@@ -100,7 +140,10 @@ const Contact = () => {
                   <FaGlobe className="text-xl" />
                 </div>
                 <div className="text">
-                  <p><span className="font-semibold">Website</span> <a href="#">yoursite.com</a></p>
+                  <p>
+                    <span className="font-semibold">Website</span>{" "}
+                    <a href="#">yoursite.com</a>
+                  </p>
                 </div>
               </div>
             </div>
