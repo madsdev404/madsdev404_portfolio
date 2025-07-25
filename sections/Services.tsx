@@ -2,54 +2,63 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  FaCube,
-  FaMobileAlt,
+  FaLaptopCode,
+  FaServer,
   FaCode,
-  FaPaintBrush,
-  FaLaptop,
-  FaVectorSquare,
+  FaFire,
+  FaTools,
+  FaIdCardAlt,
+  FaPenNib,
   FaSearch,
 } from "react-icons/fa";
 
 const servicesData = [
   {
-    title: "Web Design",
-    description: "A small river named Duden flows by their place and supplies.",
-    icon: FaCube,
+    title: "Responsive Web Design",
+    description:
+      "Crafting visually appealing and user-friendly websites optimized for all devices using Tailwind CSS and modern UI trends.",
+    icon: FaLaptopCode,
   },
   {
-    title: "Web Application",
-    description: "A small river named Duden flows by their place and supplies.",
-    icon: FaMobileAlt,
+    title: "Full-Stack Web Applications",
+    description:
+      "Building robust, scalable applications with React, Django, and Firebase — from database to deployment.",
+    icon: FaServer,
   },
   {
-    title: "Web Development",
-    description: "A small river named Duden flows by their place and supplies.",
+    title: "Frontend Development",
+    description:
+      "Developing dynamic, component-based UIs with React.js and Next.js to deliver seamless user experiences.",
     icon: FaCode,
   },
   {
-    title: "Banner Design",
-    description: "A small river named Duden flows by their place and supplies.",
-    icon: FaPaintBrush,
+    title: "Firebase Integration",
+    description:
+      "Implementing real-time databases, secure authentication, and cloud functions with Firebase for modern web apps.",
+    icon: FaFire,
   },
   {
-    title: "Branding",
-    description: "A small river named Duden flows by their place and supplies.",
-    icon: FaLaptop,
+    title: "Admin Dashboards",
+    description:
+      "Creating powerful admin panels for managing users, content, and data with clean UX and secure access controls.",
+    icon: FaTools,
   },
   {
-    title: "Icon Design",
-    description: "A small river named Duden flows by their place and supplies.",
-    icon: FaVectorSquare,
+    title: "Portfolio & Branding Sites",
+    description:
+      "Designing custom personal or brand websites that reflect identity and professionalism with fast performance.",
+    icon: FaIdCardAlt,
   },
   {
-    title: "Graphic Design",
-    description: "A small river named Duden flows by their place and supplies.",
-    icon: FaVectorSquare,
+    title: "Basic Graphic Design",
+    description:
+      "Delivering minimal design assets like logos, banners, and social media visuals using Canva or Photoshop.",
+    icon: FaPenNib,
   },
   {
-    title: "SEO",
-    description: "A small river named Duden flows by their place and supplies.",
+    title: "Technical SEO Setup",
+    description:
+      "Setting up SEO basics like meta tags, sitemap, and structured data for better visibility on search engines.",
     icon: FaSearch,
   },
 ];
@@ -75,11 +84,13 @@ const Services = () => {
               I am great at
             </span>
             <h2 className="mb-4 text-4xl font-bold">
-              We do awesome services for our clients
+              Delivering smart, scalable, and user-friendly web solutions.
             </h2>
             <p className="text-gray-700 dark:text-gray-500">
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia
+              From responsive design to full-stack development, I help bring
+              digital ideas to life with precision and creativity. I focus on
+              clean code, performance, and user experience to build apps that
+              people love to use.
             </p>
           </motion.div>
         </div>

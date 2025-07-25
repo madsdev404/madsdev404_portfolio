@@ -1,14 +1,28 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+
+const SkillItem = dynamic(() => import("@/components/SkillItem"), {
+  ssr: false,
+});
 
 const skillsData = [
-  { name: "CSS", percentage: 95 },
   { name: "HTML", percentage: 98 },
-  { name: "jQuery", percentage: 68 },
-  { name: "Photoshop", percentage: 92 },
-  { name: "WordPress", percentage: 83 },
-  { name: "SEO", percentage: 95 },
+  { name: "CSS", percentage: 96 },
+  { name: "JavaScript", percentage: 92 },
+  { name: "React.js", percentage: 88 },
+  { name: "Next.js", percentage: 80 },
+  { name: "Tailwind CSS", percentage: 95 },
+  { name: "Firebase", percentage: 85 },
+  { name: "Django", percentage: 90 },
+  { name: "Python", percentage: 88 },
+  { name: "C", percentage: 85 },
+  { name: "C++", percentage: 80 },
+  { name: "SQL", percentage: 75 },
+  { name: "Git & GitHub", percentage: 93 },
+  { name: "Teamwork", percentage: 90 },
+  { name: "Communication", percentage: 88 },
 ];
 
 const Skills = () => {
@@ -31,44 +45,19 @@ const Skills = () => {
             <span className="subheading text-lg font-semibold text-gray-600">
               Skills
             </span>
-            <h2 className="mb-4 text-4xl font-bold">My Skills</h2>
+            <h2 className="mb-4 text-4xl font-bold dark:text-gray-100">
+              My Skills
+            </h2>
             <p className="text-gray-700 dark:text-gray-400">
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia
+              I specialize in building modern, responsive web applications with
+              clean code, intuitive UI, and scalable architecture — blending
+              creativity with functionality.
             </p>
           </motion.div>
         </div>
         <div className="flex flex-wrap -mx-4">
           {skillsData.map((skill, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="w-full lg:w-1/3 px-4 mb-8"
-            >
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-                <h2 className="text-xl font-bold text-center mb-4">
-                  {skill.name}
-                </h2>
-                <div className="relative w-32 h-32 mx-auto mb-4">
-                  <div className="absolute inset-0 rounded-full border-4 border-blue-500 flex items-center justify-center text-blue-500 text-2xl font-bold">
-                    {skill.percentage}
-                    <sup className="text-sm">%</sup>
-                  </div>
-                </div>
-                <div className="flex justify-between text-center mt-4 text-gray-600 text-sm">
-                  <div className="w-1/2 border-r border-gray-300 dark:border-gray-600">
-                    <div className="font-bold">28%</div>
-                    <span>Last week</span>
-                  </div>
-                  <div className="w-1/2">
-                    <div className="font-bold dark:text-gray-100">60%</div>
-                    <span className="dark:text-gray-200">Last month</span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+            <SkillItem key={index} skill={skill} index={index} />
           ))}
         </div>
       </div>

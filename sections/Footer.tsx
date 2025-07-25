@@ -33,15 +33,16 @@ const Footer = () => {
                 Let&apos;s talk about
               </h2>
               <p className="text-gray-400 dark:text-gray-300">
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
+                Let&apos;s talk about your ideas, projects, or collaboration
+                opportunities. I&apos;m here to help bring your vision to life
+                with clean, efficient, and modern solutions.
               </p>
               <p className="mb-0 mt-4">
                 <a
-                  href="#"
+                  href="#contact-section"
                   className="btn btn-primary bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full"
                 >
-                  Learn more
+                  Contact Me
                 </a>
               </p>
             </div>

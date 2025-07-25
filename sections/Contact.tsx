@@ -21,12 +21,12 @@ const Contact = () => {
             className="w-full md:w-7/12 heading-section text-center animate-fade-in"
           >
             <span className="subheading text-lg font-semibold text-gray-600">
-              Contact us
+              Contact Me
             </span>
             <h2 className="mb-4 text-4xl font-bold">Have a Project?</h2>
             <p className="text-gray-700 dark:text-gray-500">
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia
+              I&#39;m always open to new opportunities, freelance work, or just
+              a friendly chat about tech and ideas. Reach out anytime!
             </p>
           </motion.div>
         </div>
@@ -99,47 +99,49 @@ const Contact = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="w-full md:w-4/12 flex pl-0 md:pl-5"
+            className="w-full md:w-4/12 pl-2 pt-10"
           >
             <div className="w-full">
-              <div className="dbox w-full flex mb-4">
-                <div className="icon flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white mr-4">
+              <div className="dbox w-full flex mb-10">
+                <div className="icon flex items-center justify-center size-12 rounded-full bg-blue-500 text-white mr-4">
                   <FaMapMarkerAlt className="text-xl" />
                 </div>
-                <div className="text">
+                <div className="flex items-center">
                   <p>
-                    <span className="font-semibold">Address:</span> 198 West
-                    21th Street, Suite 721 New York NY 10016
+                    <span className="font-semibold">Address:</span>Jhenaidah,
+                    Khulna, Bangladesh 🇧🇩
                   </p>
                 </div>
               </div>
-              <div className="dbox w-full flex mb-4">
-                <div className="icon flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white mr-4">
+              <div className="dbox w-full flex mb-10">
+                <div className="icon flex items-center justify-center size-12 rounded-full bg-blue-500 text-white mr-4">
                   <FaPhone className="text-xl" />
                 </div>
-                <div className="text">
+                <div className="flex items-center">
                   <p>
                     <span className="font-semibold">Phone:</span>{" "}
-                    <a href="tel://1234567920">+ 1235 2355 98</a>
+                    <a href="tel://1234567920">+880 17343-26573</a>
                   </p>
                 </div>
               </div>
-              <div className="dbox w-full flex mb-4">
-                <div className="icon flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white mr-4">
+              <div className="dbox w-full flex mb-10">
+                <div className="icon flex items-center justify-center size-12 rounded-full bg-blue-500 text-white mr-4">
                   <FaPaperPlane className="text-xl" />
                 </div>
-                <div className="text">
+                <div className="flex items-center">
                   <p>
                     <span className="font-semibold">Email:</span>{" "}
-                    <a href="mailto:info@yoursite.com">info@yoursite.com</a>
+                    <a href="mailto:info@yoursite.com">
+                      abduss.sobhan28@gmail.com
+                    </a>
                   </p>
                 </div>
               </div>
               <div className="dbox w-full flex">
-                <div className="icon flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white mr-4">
+                <div className="icon flex items-center justify-center size-12 rounded-full bg-blue-500 text-white mr-4">
                   <FaGlobe className="text-xl" />
                 </div>
-                <div className="text">
+                <div className="flex items-center">
                   <p>
                     <span className="font-semibold">Website</span>{" "}
                     <a href="#">yoursite.com</a>
