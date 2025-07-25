@@ -18,7 +18,7 @@ const Footer = () => {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="ftco-footer ftco-section py-16 bg-gray-900 text-gray-300"
+      className="ftco-footer ftco-section py-16 bg-gray-900 dark:bg-gray-700 text-gray-300 dark:text-gray-200"
     >
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap mb-8">
@@ -29,10 +29,10 @@ const Footer = () => {
             className="w-full md:w-1/4 mb-8 md:mb-0"
           >
             <div className="ftco-footer-widget mb-4">
-              <h2 className="ftco-heading-2 text-white text-2xl font-semibold mb-4">
+              <h2 className="ftco-heading-2 text-white dark:text-gray-100 text-2xl font-semibold mb-4">
                 Let&apos;s talk about
               </h2>
-              <p className="text-gray-400">
+              <p className="text-gray-400 dark:text-gray-300">
                 Far far away, behind the word mountains, far from the countries
                 Vokalia and Consonantia, there live the blind texts.
               </p>
@@ -53,7 +53,7 @@ const Footer = () => {
             className="w-full md:w-1/4 mb-8 md:mb-0 ml-0 md:ml-4"
           >
             <div className="ftco-footer-widget mb-4">
-              <h2 className="ftco-heading-2 text-white text-2xl font-semibold mb-4">
+              <h2 className="ftco-heading-2 text-white dark:text-gray-100 text-2xl font-semibold mb-4">
                 Links
               </h2>
               <ul className="list-none p-0">
@@ -112,7 +112,7 @@ const Footer = () => {
             className="w-full md:w-1/4 mb-8 md:mb-0"
           >
             <div className="ftco-footer-widget mb-4">
-              <h2 className="ftco-heading-2 text-white text-2xl font-semibold mb-4">
+              <h2 className="ftco-heading-2 text-white dark:text-gray-100 text-2xl font-semibold mb-4">
                 Services
               </h2>
               <ul className="list-none p-0">
@@ -171,7 +171,7 @@ const Footer = () => {
             className="w-full md:w-1/4 mb-8 md:mb-0"
           >
             <div className="ftco-footer-widget mb-4">
-              <h2 className="ftco-heading-2 text-white text-2xl font-semibold mb-4">
+              <h2 className="ftco-heading-2 text-white dark:text-gray-100 text-2xl font-semibold mb-4">
                 Have a Questions?
               </h2>
               <div className="block-23 mb-3">
@@ -224,7 +224,7 @@ const Footer = () => {
         </div>
         <div className="row">
           <div className="w-full text-center">
-            <p className="text-gray-500">
+            <p className="text-gray-500 dark:text-gray-400">
               Copyright &copy;{new Date().getFullYear()} All rights reserved
               made with{" "}
               <FaHeart className="inline-block mx-1" aria-hidden="true" /> by{" "}

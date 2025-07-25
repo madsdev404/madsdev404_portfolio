@@ -90,7 +90,7 @@ const Projects = () => {
                   <h3 className="text-white text-xl font-semibold mb-2">
                     <a href="#">{project.title}</a>
                   </h3>
-                  <span className="text-gray-300 text-sm">
+                  <span className="text-gray-300 dark:text-gray-400 text-sm">
                     {project.category}
                   </span>
                 </div>

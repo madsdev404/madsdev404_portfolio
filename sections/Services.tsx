@@ -52,7 +52,7 @@ const Services = () => {
                 </div>
                 <div className="media-body">
                   <h3 className="heading mb-3 text-xl font-semibold">{service.title}</h3>
-                  <p className="text-gray-700">{service.description}</p>
+                  <p className="text-gray-700 dark:text-gray-200">{service.description}</p>
                 </div>
               </div>
             </motion.div>

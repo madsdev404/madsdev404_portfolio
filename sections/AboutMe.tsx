@@ -42,7 +42,7 @@ const AboutMe = () => {
                   <h2 className="mb-4 text-4xl font-bold capitalize">
                     About Me
                   </h2>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 dark:text-gray-200">
                     A small river named Duden flows by their place and supplies
                     it with the necessary regelialia. It is a paradisematic
                     country, in which roasted parts of sentences fly into your

@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from '@/components/Navbar';
+import { ThemeProvider } from '@/components/ThemeContext';
 
 export const metadata = {
   title: "madsdev404 - Portfolio",
@@ -12,8 +13,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        {children}
+        <ThemeProvider>
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

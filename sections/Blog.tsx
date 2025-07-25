@@ -25,7 +25,7 @@ const Blog = () => {
           </motion.div>
         </div>
         {/* Add blog posts here */}
-        <div className="text-center text-gray-500">
+        <div className="text-center text-gray-500 dark:text-gray-400">
           <p>No blog posts yet. Coming soon!</p>
         </div>
       </div>

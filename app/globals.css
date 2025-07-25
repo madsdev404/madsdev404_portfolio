@@ -38,4 +38,11 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: #F9FAFB; /* light background */
+  color: #111827; /* dark text */
+}
+
+html.dark body {
+  background-color: #111827; /* dark background */
+  color: #F9FAFB; /* light text */
 }

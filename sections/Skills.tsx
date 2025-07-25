@@ -50,7 +50,7 @@ const Skills = () => {
                   </div>
                 </div>
                 <div className="flex justify-between text-center mt-4 text-gray-600 text-sm">
-                  <div className="w-1/2 border-r border-gray-300">
+                  <div className="w-1/2 border-r border-gray-300 dark:border-gray-600">
                     <div className="font-bold">28%</div>
                     <span>Last week</span>
                   </div>
