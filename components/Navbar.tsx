@@ -1,12 +1,44 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState('home-section');
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section[id]');
+      let currentActive = 'home-section';
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i] as HTMLElement;
+        const sectionTop = section.offsetTop - 100; // Adjust offset as needed
+        if (window.scrollY >= sectionTop) {
+          currentActive = section.id;
+          break;
+        }
+      }
+      setActiveLink(currentActive);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Set initial active link
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const handleNavLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    setActiveLink(sectionId);
+    setIsOpen(false); // Close mobile menu on link click
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -23,13 +55,27 @@ const Navbar = () => {
 
         <div className={`lg:flex ${isOpen ? 'block' : 'hidden'} w-full lg:w-auto`} id="ftco-nav">
           <ul className="navbar-nav ml-auto flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4 mt-4 lg:mt-0">
-            <li className="nav-item"><Link href="#home-section" className="nav-link text-white hover:text-yellow-400 block py-2 px-3"><span>Home</span></Link></li>
-            <li className="nav-item"><Link href="#about-section" className="nav-link text-white hover:text-yellow-400 block py-2 px-3"><span>About</span></Link></li>
-            <li className="nav-item"><Link href="#skills-section" className="nav-link text-white hover:text-yellow-400 block py-2 px-3"><span>Skills</span></Link></li>
-            <li className="nav-item"><Link href="#services-section" className="nav-link text-white hover:text-yellow-400 block py-2 px-3"><span>Services</span></Link></li>
-            <li className="nav-item"><Link href="#projects-section" className="nav-link text-white hover:text-yellow-400 block py-2 px-3"><span>Projects</span></Link></li>
-            <li className="nav-item"><Link href="#blog-section" className="nav-link text-white hover:text-yellow-400 block py-2 px-.3"><span>Blog</span></Link></li>
-            <li className="nav-item"><Link href="#contact-section" className="nav-link text-white hover:text-yellow-400 block py-2 px-3"><span>Contact</span></Link></li>
+            <li className={`nav-item ${activeLink === 'home-section' ? 'active' : ''}`}>
+              <Link href="#home-section" onClick={(e) => handleNavLinkClick(e, 'home-section')} className={`nav-link text-white hover:text-blue-500 block py-2 px-3 ${activeLink === 'home-section' ? 'active' : ''}`}><span>Home</span></Link>
+            </li>
+            <li className={`nav-item ${activeLink === 'about-section' ? 'active' : ''}`}>
+              <Link href="#about-section" onClick={(e) => handleNavLinkClick(e, 'about-section')} className={`nav-link text-white hover:text-blue-500 block py-2 px-3 ${activeLink === 'about-section' ? 'active' : ''}`}><span>About</span></Link>
+            </li>
+            <li className={`nav-item ${activeLink === 'skills-section' ? 'active' : ''}`}>
+              <Link href="#skills-section" onClick={(e) => handleNavLinkClick(e, 'skills-section')} className={`nav-link text-white hover:text-blue-500 block py-2 px-3 ${activeLink === 'skills-section' ? 'active' : ''}`}><span>Skills</span></Link>
+            </li>
+            <li className={`nav-item ${activeLink === 'services-section' ? 'active' : ''}`}>
+              <Link href="#services-section" onClick={(e) => handleNavLinkClick(e, 'services-section')} className={`nav-link text-white hover:text-blue-500 block py-2 px-3 ${activeLink === 'services-section' ? 'active' : ''}`}><span>Services</span></Link>
+            </li>
+            <li className={`nav-item ${activeLink === 'projects-section' ? 'active' : ''}`}>
+              <Link href="#projects-section" onClick={(e) => handleNavLinkClick(e, 'projects-section')} className={`nav-link text-white hover:text-blue-500 block py-2 px-3 ${activeLink === 'projects-section' ? 'active' : ''}`}><span>Projects</span></Link>
+            </li>
+            <li className={`nav-item ${activeLink === 'blog-section' ? 'active' : ''}`}>
+              <Link href="#blog-section" onClick={(e) => handleNavLinkClick(e, 'blog-section')} className={`nav-link text-white hover:text-blue-500 block py-2 px-3 ${activeLink === 'blog-section' ? 'active' : ''}`}><span>Blog</span></Link>
+            </li>
+            <li className={`nav-item ${activeLink === 'contact-section' ? 'active' : ''}`}>
+              <Link href="#contact-section" onClick={(e) => handleNavLinkClick(e, 'contact-section')} className={`nav-link text-white hover:text-blue-500 block py-2 px-3 ${activeLink === 'contact-section' ? 'active' : ''}`}><span>Contact</span></Link>
+            </li>
           </ul>
         </div>
       </div>

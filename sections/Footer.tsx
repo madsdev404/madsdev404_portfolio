@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -60,7 +60,7 @@ const Footer = () => {
                 <li className="mb-2">
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-yellow-400 flex items-center"
+                    className="text-gray-400 hover:text-blue-400 flex items-center"
                   >
                     <FaChevronRight className="mr-2" />
                     Home
@@ -69,7 +69,7 @@ const Footer = () => {
                 <li className="mb-2">
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-yellow-400 flex items-center"
+                    className="text-gray-400 hover:text-blue-400 flex items-center"
                   >
                     <FaChevronRight className="mr-2" />
                     About
@@ -78,7 +78,7 @@ const Footer = () => {
                 <li className="mb-2">
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-yellow-400 flex items-center"
+                    className="text-gray-400 hover:text-blue-400 flex items-center"
                   >
                     <FaChevronRight className="mr-2" />
                     Services
@@ -87,7 +87,7 @@ const Footer = () => {
                 <li className="mb-2">
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-yellow-400 flex items-center"
+                    className="text-gray-400 hover:text-blue-400 flex items-center"
                   >
                     <FaChevronRight className="mr-2" />
                     Projects
@@ -96,7 +96,7 @@ const Footer = () => {
                 <li className="mb-2">
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-yellow-400 flex items-center"
+                    className="text-gray-400 hover:text-blue-400 flex items-center"
                   >
                     <FaChevronRight className="mr-2" />
                     Contact
@@ -119,7 +119,7 @@ const Footer = () => {
                 <li className="mb-2">
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-yellow-400 flex items-center"
+                    className="text-gray-400 hover:text-blue-400 flex items-center"
                   >
                     <FaChevronRight className="mr-2" />
                     Web Design
@@ -128,7 +128,7 @@ const Footer = () => {
                 <li className="mb-2">
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-yellow-400 flex items-center"
+                    className="text-gray-400 hover:text-blue-400 flex items-center"
                   >
                     <FaChevronRight className="mr-2" />
                     Web Development
@@ -137,7 +137,7 @@ const Footer = () => {
                 <li className="mb-2">
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-yellow-400 flex items-center"
+                    className="text-gray-400 hover:text-blue-400 flex items-center"
                   >
                     <FaChevronRight className="mr-2" />
                     Business Strategy
@@ -146,7 +146,7 @@ const Footer = () => {
                 <li className="mb-2">
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-yellow-400 flex items-center"
+                    className="text-gray-400 hover:text-blue-400 flex items-center"
                   >
                     <FaChevronRight className="mr-2" />
                     Data Analysis
@@ -155,7 +155,7 @@ const Footer = () => {
                 <li className="mb-2">
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-yellow-400 flex items-center"
+                    className="text-gray-400 hover:text-blue-400 flex items-center"
                   >
                     <FaChevronRight className="mr-2" />
                     Graphic Design
@@ -185,7 +185,7 @@ const Footer = () => {
                   <li className="flex mb-2 items-center">
                     <a
                       href="#"
-                      className="text-gray-400 hover:text-yellow-400 flex items-center"
+                      className="text-gray-400 hover:text-blue-400 flex items-center"
                     >
                       <FaPhone className="mr-3" />
                       <span className="text">+2 392 3929 210</span>
@@ -194,7 +194,7 @@ const Footer = () => {
                   <li className="flex mb-2 items-center">
                     <a
                       href="#"
-                      className="text-gray-400 hover:text-yellow-400 flex items-center"
+                      className="text-gray-400 hover:text-blue-400 flex items-center"
                     >
                       <FaPaperPlane className="mr-3" />
                       <span className="text">info@yourdomain.com</span>
@@ -204,17 +204,17 @@ const Footer = () => {
               </div>
               <ul className="ftco-footer-social list-none p-0 flex mt-2">
                 <li className="mr-3">
-                  <a href="#" className="text-gray-400 hover:text-yellow-400">
+                  <a href="#" className="text-gray-400 hover:text-blue-400">
                     <FaTwitter />
                   </a>
                 </li>
                 <li className="mr-3">
-                  <a href="#" className="text-gray-400 hover:text-yellow-400">
+                  <a href="#" className="text-gray-400 hover:text-blue-400">
                     <FaFacebook />
                   </a>
                 </li>
                 <li className="mr-3">
-                  <a href="#" className="text-gray-400 hover:text-yellow-400">
+                  <a href="#" className="text-gray-400 hover:text-blue-400">
                     <FaInstagram />
                   </a>
                 </li>
@@ -231,9 +231,10 @@ const Footer = () => {
               <a
                 href="https://colorlib.com"
                 target="_blank"
-                className="text-blue-400 hover:underline"
+                className="text-white hover:underline"
               >
-                MADSDEV404
+                mads<span className="text-blue-500">dev</span>
+                <span className="text-red-500">404</span>
               </a>
             </p>
           </div>

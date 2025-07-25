@@ -4,6 +4,7 @@ import Skills from '@/sections/Skills';
 import Services from '@/sections/Services';
 import Projects from '@/sections/Projects';
 import Contact from '@/sections/Contact';
+import Blog from '@/sections/Blog';
 import Footer from '@/sections/Footer';
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Skills />
       <Services />
       <Projects />
+      <Blog />
       <Contact />
       <Footer />
     </main>

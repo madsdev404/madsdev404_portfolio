@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <section
+      id="home-section"
       className="relative h-screen flex items-center justify-center text-white bg-cover bg-center"
       style={{ backgroundImage: "url(/images/hero.png)" }}
     >
@@ -23,17 +24,11 @@ const Hero = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-2xl font-bold mt-3 mb-4 marquee-container"
+          className="text-2xl font-bold mt-3 mb-4"
         >
-          <span className="marquee-text">
-            Creating intuitive <span className="text-blue-400">interfaces</span>{" "}
-            and robust <span className="text-green-400">backends</span> — where
-            creativity meets code.
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Creating intuitive <span className="text-blue-400">interfaces</span>{" "}
-            and robust <span className="text-green-400">backends</span> — where
-            creativity meets code.
-          </span>
+          Creating intuitive <span className="text-blue-400">interfaces</span>{" "}
+          and robust <span className="text-green-400">backends</span> — where
+          creativity meets code.
         </motion.h1>
         <motion.h3
           initial={{ opacity: 0, y: -50 }}
