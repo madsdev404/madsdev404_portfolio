@@ -7,3 +7,22 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.marquee-text {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+  animation-delay: 3s; /* Delay animation start by 3 seconds */
+}

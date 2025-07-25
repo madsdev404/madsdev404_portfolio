@@ -1,1 +1,1 @@
-Integrated react-icons and framer-motion animations into AboutMe, Services, Contact, Skills, Projects, and Footer sections.
+Updated Tailwind CSS color palette and global font styling.

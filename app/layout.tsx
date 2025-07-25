@@ -2,7 +2,7 @@ import "./globals.css";
 import Navbar from '@/components/Navbar';
 
 export const metadata = {
-  title: "Clyde - Portfolio",
+  title: "madsdev404 - Portfolio",
   description: "A modern portfolio built with Next.js and Tailwind CSS",
 };
 

@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCube, FaMobileAlt, FaCode, FaPaintBrush, FaLaptop, FaVectorSquare, FaSearch } from 'react-icons/fa';
