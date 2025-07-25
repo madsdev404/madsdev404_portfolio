@@ -2,9 +2,34 @@
 
 This document outlines the steps to set up and deploy the `madsdev404` Next.js application to Firebase Hosting.
 
-### 1. Firebase Project Configuration
+### 1. Environment Variables Configuration
 
-Your Firebase project configuration is stored in the `.env` file for security and easy management. The variables are:
+Your project's configuration, including Firebase and email settings, is stored in the `.env` file for security and easy management. The variables are:
+
+```
+# Firebase
+NEXT_PUBLIC_FIREBASE_API_KEY="AIzaSyD42PZQS0vqBCopkeKOuDZsyjnyeWNodZU"
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN="madsdev404.firebaseapp.com"
+NEXT_PUBLIC_FIREBASE_PROJECT_ID="madsdev404"
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET="madsdev404.firebasestorage.app"
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID="990764817212"
+NEXT_PUBLIC_FIREBASE_APP_ID="1:990764817212:web:29e52e8aff4c635cb61c39"
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID="G-6HFEESH2WN"
+
+# Email (for contact form)
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+EMAIL_HOST_USER=abduss.sobhan28@gmail.com
+EMAIL_HOST_PASSWORD=scsxzhbyiwfyhrgn
+DEFAULT_FROM_EMAIL=abduss.sobhan28@gmail.com
+```
+
+**Note on Email Configuration:** The `EMAIL_HOST_PASSWORD` should be an application-specific password if you are using Gmail with 2-Factor Authentication enabled. Do not use your primary Gmail password directly.
+
+### 2. Contact Form API Route
+
+The contact form submission is handled by a Next.js API route located at `app/api/contact/route.ts`. This route uses `nodemailer` to send emails based on the `EMAIL` environment variables configured above.
 
 ### 2. Firebase Initialization File (`lib/firebase.ts`)
 

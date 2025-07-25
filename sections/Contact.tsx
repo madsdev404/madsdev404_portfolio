@@ -1,9 +1,59 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaMapMarkerAlt, FaPhone, FaPaperPlane, FaGlobe } from "react-icons/fa";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
+  const [responseMessage, setResponseMessage] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("loading");
+    setResponseMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus("success");
+        setResponseMessage(data.message);
+        setFormData({ name: "", email: "", subject: "", message: "" }); // Clear form
+      } else {
+        setStatus("error");
+        setResponseMessage(
+          data.message || "Something went wrong. Please try again."
+        );
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setStatus("error");
+      setResponseMessage("Network error. Please try again later.");
+    }
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
@@ -39,7 +89,7 @@ const Contact = () => {
             className="w-full md:w-8/12 px-4 mb-8"
           >
             <form
-              action="#"
+              onSubmit={handleSubmit}
               className="bg-white dark:bg-gray-700 p-8 md:p-10 rounded-lg shadow contact-form"
             >
               <div className="flex flex-wrap -mx-2">
@@ -47,17 +97,25 @@ const Contact = () => {
                   <div className="form-group">
                     <input
                       type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
                       className="form-control w-full bg-white dark:bg-gray-600 p-3 border border-gray-300 rounded-md"
                       placeholder="Your Name"
+                      required
                     />
                   </div>
                 </div>
                 <div className="w-full md:w-1/2 px-2 mb-4">
                   <div className="form-group">
                     <input
-                      type="text"
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       className="form-control w-full bg-white dark:bg-gray-600 p-3 border border-gray-300 rounded-md"
                       placeholder="Your Email"
+                      required
                     />
                   </div>
                 </div>
@@ -65,32 +123,49 @@ const Contact = () => {
                   <div className="form-group">
                     <input
                       type="text"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
                       className="form-control w-full bg-white dark:bg-gray-600 p-3 border border-gray-300 rounded-md"
                       placeholder="Subject"
+                      required
                     />
                   </div>
                 </div>
                 <div className="w-full px-2 mb-4">
                   <div className="form-group">
                     <textarea
-                      name=""
-                      id=""
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
                       cols={30}
                       rows={7}
                       className="form-control w-full bg-white dark:bg-gray-600 p-3 border border-gray-300 rounded-md"
                       placeholder="Message"
+                      required
                     ></textarea>
                   </div>
                 </div>
                 <div className="w-full px-2 mb-4">
                   <div className="form-group">
-                    <input
+                    <button
                       type="submit"
-                      value="Send Message"
                       className="btn btn-primary bg-blue-500 hover:bg-blue-600 text-white py-3 px-5 rounded-full cursor-pointer"
-                    />
+                      disabled={status === "loading"}
+                    >
+                      {status === "loading" ? "Sending..." : "Send Message"}
+                    </button>
                   </div>
                 </div>
+                {responseMessage && (
+                  <div
+                    className={`w-full px-2 mt-4 text-center ${
+                      status === "success" ? "text-green-500" : "text-red-500"
+                    }`}
+                  >
+                    {responseMessage}
+                  </div>
+                )}
               </div>
             </form>
           </motion.div>

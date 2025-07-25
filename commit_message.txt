@@ -1,1 +1,0 @@
-Updated Tailwind CSS color palette and global font styling.

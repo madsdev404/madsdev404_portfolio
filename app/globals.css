@@ -12,7 +12,7 @@
 .nav-item .nav-link span {
   position: relative;
   z-index: 1;
-}
+} 
 
 .nav-item .nav-link::before {
   content: '';
