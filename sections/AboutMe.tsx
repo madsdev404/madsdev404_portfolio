@@ -9,7 +9,7 @@ const AboutMe = () => {
           <div className="w-full md:w-1/2 lg:w-5/12 flex">
             <div className="img-about relative flex items-stretch w-full">
               <div className="absolute inset-0 bg-black opacity-50"></div>
-              <Image src="/images/about-1.jpg" alt="About Me" layout="fill" objectFit="cover" className="align-self-stretch" />
+              <Image src="/images/about-1.jpg" alt="About Me" fill style={{ objectFit: 'cover' }} className="align-self-stretch" />
             </div>
           </div>
           <div className="w-full md:w-1/2 lg:w-7/12 pl-0 md:pl-4 lg:pl-5 py-5">
