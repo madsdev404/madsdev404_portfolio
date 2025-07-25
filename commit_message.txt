@@ -1,1 +1,1 @@
-Implemented Services section.
+Implemented Projects section.
