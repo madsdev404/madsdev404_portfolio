@@ -1,4 +1,5 @@
 import "./globals.css";
+import Navbar from '@/components/Navbar';
 
 export const metadata = {
   title: "Clyde - Portfolio",
@@ -10,7 +11,10 @@ export default function RootLayout({
 }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
