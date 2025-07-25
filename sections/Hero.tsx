@@ -2,6 +2,7 @@
 import React from "react";
 import Button from "@/components/Button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -45,10 +46,13 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <Button variant="primary" className="mr-4">
+          <Link
+            href="#contact-section"
+            className="bg-blue-500 px-4 py-3 rounded-full text-white hover:bg-blue-600 mr-4"
+          >
             Hire me
-          </Button>
-          <Button variant="outline">Download CV</Button>
+          </Link>
+          <Button variant="outline">Download Resume</Button>
         </motion.p>
       </div>
     </section>

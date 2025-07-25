@@ -80,13 +80,13 @@ const Services = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="w-full md:w-7/12 heading-section text-center animate-fade-in"
           >
-            <span className="subheading text-lg font-semibold text-gray-600">
+            <span className="subheading text-lg font-semibold text-gray-500 dark:text-gray-400">
               I am great at
             </span>
-            <h2 className="mb-4 text-4xl font-bold">
+            <h2 className="mb-4 text-3xl font-bold">
               Delivering smart, scalable, and user-friendly web solutions.
             </h2>
-            <p className="text-gray-700 dark:text-gray-500">
+            <p className="text-gray-500 dark:text-gray-400">
               From responsive design to full-stack development, I help bring
               digital ideas to life with precision and creativity. I focus on
               clean code, performance, and user experience to build apps that

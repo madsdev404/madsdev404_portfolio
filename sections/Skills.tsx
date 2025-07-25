@@ -42,13 +42,13 @@ const Skills = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="w-full md:w-7/12 heading-section text-center animate-fade-in"
           >
-            <span className="subheading text-lg font-semibold text-gray-600">
+            <span className="subheading text-lg font-semibold text-gray-500 dark:text-gray-400">
               Skills
             </span>
-            <h2 className="mb-4 text-4xl font-bold dark:text-gray-100">
+            <h2 className="mb-4 text-3xl font-bold dark:text-gray-100">
               My Skills
             </h2>
-            <p className="text-gray-700 dark:text-gray-400">
+            <p className="text-gray-500 dark:text-gray-400">
               I specialize in building modern, responsive web applications with
               clean code, intuitive UI, and scalable architecture — blending
               creativity with functionality.

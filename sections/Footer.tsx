@@ -5,11 +5,11 @@ import {
   FaMapMarkerAlt,
   FaPhone,
   FaPaperPlane,
-  FaTwitter,
   FaFacebook,
-  FaInstagram,
   FaChevronRight,
   FaHeart,
+  FaGithub,
+  FaLinkedin,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -123,7 +123,7 @@ const Footer = () => {
                     className="text-gray-400 hover:text-blue-400 flex items-center"
                   >
                     <FaChevronRight className="mr-2" />
-                    Web Design
+                    Technical SEO Setup
                   </a>
                 </li>
                 <li className="mb-2">
@@ -141,7 +141,7 @@ const Footer = () => {
                     className="text-gray-400 hover:text-blue-400 flex items-center"
                   >
                     <FaChevronRight className="mr-2" />
-                    Business Strategy
+                    Firebase Integration
                   </a>
                 </li>
                 <li className="mb-2">
@@ -150,7 +150,7 @@ const Footer = () => {
                     className="text-gray-400 hover:text-blue-400 flex items-center"
                   >
                     <FaChevronRight className="mr-2" />
-                    Data Analysis
+                    Full-Stack Web Applications
                   </a>
                 </li>
                 <li className="mb-2">
@@ -159,7 +159,7 @@ const Footer = () => {
                     className="text-gray-400 hover:text-blue-400 flex items-center"
                   >
                     <FaChevronRight className="mr-2" />
-                    Graphic Design
+                    Responsive Web Design
                   </a>
                 </li>
               </ul>
@@ -179,8 +179,9 @@ const Footer = () => {
                 <ul className="list-none p-0">
                   <li className="flex mb-2 items-center">
                     <FaMapMarkerAlt className="mr-3" />
-                    <span className="text">
-                      203 Fake St. Mountain View, San Francisco, California, USA
+                    <span className="text-sm">
+                      Horinakundu, Jhenaidah District, Khulna Division,
+                      Bangladesh 🇧🇩
                     </span>
                   </li>
                   <li className="flex mb-2 items-center">
@@ -189,7 +190,7 @@ const Footer = () => {
                       className="text-gray-400 hover:text-blue-400 flex items-center"
                     >
                       <FaPhone className="mr-3" />
-                      <span className="text">+2 392 3929 210</span>
+                      <span className="text"> +880 17343-26573</span>
                     </a>
                   </li>
                   <li className="flex mb-2 items-center">
@@ -198,25 +199,37 @@ const Footer = () => {
                       className="text-gray-400 hover:text-blue-400 flex items-center"
                     >
                       <FaPaperPlane className="mr-3" />
-                      <span className="text">info@yourdomain.com</span>
+                      <span className="text">abduss.sobhan28@gmail.com</span>
                     </a>
                   </li>
                 </ul>
               </div>
               <ul className="ftco-footer-social list-none p-0 flex mt-2">
                 <li className="mr-3">
-                  <a href="#" className="text-gray-400 hover:text-blue-400">
-                    <FaTwitter />
+                  <a
+                    target="_blank"
+                    href="https://github.com/madsdev404"
+                    className="text-gray-400 hover:text-blue-400"
+                  >
+                    <FaGithub />
                   </a>
                 </li>
                 <li className="mr-3">
-                  <a href="#" className="text-gray-400 hover:text-blue-400">
+                  <a
+                    target="_blank"
+                    href="https://www.facebook.com/madsdev404/"
+                    className="text-gray-400 hover:text-blue-400"
+                  >
                     <FaFacebook />
                   </a>
                 </li>
                 <li className="mr-3">
-                  <a href="#" className="text-gray-400 hover:text-blue-400">
-                    <FaInstagram />
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/madsdev404/"
+                    className="text-gray-400 hover:text-blue-400"
+                  >
+                    <FaLinkedin />
                   </a>
                 </li>
               </ul>

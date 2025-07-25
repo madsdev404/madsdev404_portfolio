@@ -71,11 +71,11 @@ const Projects = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="w-full md:w-7/12 heading-section text-center animate-fade-in"
           >
-            <span className="subheading text-lg font-semibold text-gray-600">
+            <span className="subheading text-lg font-semibold text-gray-500">
               Accomplishments
             </span>
-            <h2 className="mb-4 text-4xl font-bold">My Projects</h2>
-            <p className="text-gray-700">
+            <h2 className="mb-4 text-3xl font-bold">My Projects</h2>
+            <p className="text-gray-500">
               Featured projects include task management systems, food delivery
               apps, and real-time chat applications—built with React, Django,
               Firebase, and Expo. Each project highlights a commitment to

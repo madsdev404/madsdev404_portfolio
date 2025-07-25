@@ -20,11 +20,11 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="w-full md:w-7/12 heading-section text-center animate-fade-in"
           >
-            <span className="subheading text-lg font-semibold text-gray-600">
+            <span className="subheading text-lg font-semibold text-gray-500 dark:text-gray-400">
               Contact Me
             </span>
-            <h2 className="mb-4 text-4xl font-bold">Have a Project?</h2>
-            <p className="text-gray-700 dark:text-gray-500">
+            <h2 className="mb-4 text-3xl font-bold">Have a Project?</h2>
+            <p className="text-gray-500 dark:text-gray-400">
               I&#39;m always open to new opportunities, freelance work, or just
               a friendly chat about tech and ideas. Reach out anytime!
             </p>
@@ -120,7 +120,7 @@ const Contact = () => {
                 <div className="flex items-center">
                   <p>
                     <span className="font-semibold">Phone:</span>{" "}
-                    <a href="tel://1234567920">+880 17343-26573</a>
+                    <a href="tel://+8801734326573">+880 17343-26573</a>
                   </p>
                 </div>
               </div>
@@ -131,7 +131,7 @@ const Contact = () => {
                 <div className="flex items-center">
                   <p>
                     <span className="font-semibold">Email:</span>{" "}
-                    <a href="mailto:info@yoursite.com">
+                    <a href="mailto:abduss.sobhan28@gmail.com">
                       abduss.sobhan28@gmail.com
                     </a>
                   </p>
@@ -144,7 +144,9 @@ const Contact = () => {
                 <div className="flex items-center">
                   <p>
                     <span className="font-semibold">Website</span>{" "}
-                    <a href="#">yoursite.com</a>
+                    <a target="_blank" href="https://madsdev404.web.app">
+                      madsdev404.web.app
+                    </a>
                   </p>
                 </div>
               </div>

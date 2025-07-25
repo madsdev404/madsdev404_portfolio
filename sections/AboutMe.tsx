@@ -33,10 +33,10 @@ const AboutMe = () => {
             <div className="py-md-5">
               <div className="flex flex-wrap justify-start pb-3">
                 <div className="w-full heading-section text-left animate-fade-in">
-                  <span className="subheading text-lg font-semibold text-gray-600">
+                  <span className="subheading text-lg font-semibold text-gray-500 dark:text-gray-400">
                     My Intro
                   </span>
-                  <h2 className="mb-4 text-4xl font-bold capitalize">
+                  <h2 className="mb-4 text-3xl font-bold capitalize">
                     About Me
                   </h2>
                   <p className="text-gray-700 dark:text-gray-200">
