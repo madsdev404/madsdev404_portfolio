@@ -1,7 +1,9 @@
+import Hero from '@/sections/Hero';
+
 export default function Home() {
   return (
     <main>
-      <h1>Welcome to my portfolio!</h1>
+      <Hero />
     </main>
   );
 }
