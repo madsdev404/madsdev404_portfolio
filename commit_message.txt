@@ -1,1 +1,1 @@
-Implemented Projects section.
+Implemented Contact section.
