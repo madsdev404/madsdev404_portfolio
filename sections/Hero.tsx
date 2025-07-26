@@ -52,7 +52,13 @@ const Hero = () => {
           >
             Hire me
           </Link>
-          <Button variant="outline">Download Resume</Button>
+          <a
+            href="/madsdev404Resume.pdf"
+            download="madsdev404Resume.pdf"
+            className="py-3 px-6 rounded-full inline-block border border-white text-white hover:bg-white hover:text-blue-500"
+          >
+            Download Resume
+          </a>
         </motion.p>
       </div>
     </section>

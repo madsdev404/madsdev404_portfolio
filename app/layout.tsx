@@ -4,7 +4,8 @@ import { ThemeProvider } from "@/components/ThemeContext";
 
 export const metadata = {
   title: "madsdev404",
-  description: "A modern portfolio built with Next.js and Tailwind CSS",
+  description:
+    "A modern, responsive portfolio website showcasing my skills, projects, and professional journey as a developer.",
 };
 
 export default function RootLayout({
