@@ -27,7 +27,7 @@ const Contact = () => {
     setResponseMessage("");
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://us-central1-madsdev404.cloudfunctions.net/sendEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

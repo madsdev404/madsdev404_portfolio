@@ -4,7 +4,21 @@ const nextConfig: NextConfig = {
   transpilePackages: ["framer-motion"],
   output: 'export',
   images: { unoptimized: true },
-  /* config options here */
+  env: {
+    NEXT_PUBLIC_FIREBASE_API_KEY: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    NEXT_PUBLIC_FIREBASE_PROJECT_ID: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    NEXT_PUBLIC_FIREBASE_APP_ID: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+    NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+    EMAIL_HOST: process.env.EMAIL_HOST,
+    EMAIL_PORT: process.env.EMAIL_PORT,
+    EMAIL_USE_TLS: process.env.EMAIL_USE_TLS,
+    EMAIL_HOST_USER: process.env.EMAIL_HOST_USER,
+    EMAIL_HOST_PASSWORD: process.env.EMAIL_HOST_PASSWORD,
+    DEFAULT_FROM_EMAIL: process.env.DEFAULT_FROM_EMAIL,
+  },
 };
-
+ 
 export default nextConfig;
